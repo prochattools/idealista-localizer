@@ -1,0 +1,230 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9fafb; /* Lighter background */
+    color: #1f2937; /* Darker text for better contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.2em; /* Slightly smaller H1 */
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #6b7280; /* Softer description text */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px; /* Softer corners */
+    border: 1px solid #e5e7eb; /* Subtle border */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.card-header {
+    padding: 12px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.lang-switcher button {
+    border: 1px solid transparent;
+    background: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #6b7280;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.lang-switcher button:hover {
+    background-color: #f3f4f6;
+}
+
+.lang-switcher button.active {
+    background-color: #fff;
+    color: #3b82f6; /* Brighter blue for active state */
+    border: 1px solid #d1d5db;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+    gap: 20px; /* Increased gap for more whitespace */
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #374151;
+}
+
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group select:focus, .form-group input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.results-header h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #111827;
+}
+
+#results-count {
+    font-size: 0.9em;
+    color: #6b7280;
+}
+
+.results-container {
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.results-list-header {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    padding: 15px 20px;
+    background-color: #f9fafb;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #6b7280;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#results-list .result-item {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#results-list .result-item:last-child {
+    border-bottom: none;
+}
+
+#results-list .result-item:hover {
+    background-color: #f3f4f6;
+}
+
+.col-name, .col-type, .col-id, .col-action {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.col-id {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
+.col-action {
+    text-align: right;
+}
+
+.copy-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #2563eb;
+}
+
+.no-results {
+    padding: 30px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #9ca3af;
+}
+
+.footer-text a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.copied-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #22c55e; /* Green for success */
+    color: white;
+    padding: 14px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.copied-message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

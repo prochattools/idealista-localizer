@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idealista Location Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Idealista Location Finder</h1>
+            <p id="description-text">This tool helps you find the location ID for the Idealista Scraper. Select a country and type to filter locations, or search by name/ID prefix.</p>
+        </header>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="lang-switcher">
+                    <button id="lang-en" class="active">EN</button>
+                    <button id="lang-es">ES</button>
+                    <button id="lang-it">IT</button>
+                    <button id="lang-pt">PT</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="filters">
+                    <div class="form-group">
+                        <label for="country" id="country-label">Country</label>
+                        <select id="country">
+                            <option value="" id="select-country-text">Select a country</option>
+                            <option value="es">Spain</option>
+                            <option value="it">Italy</option>
+                            <option value="pt">Portugal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="type" id="type-label">Type</label>
+                        <select id="type">
+                            <option value="" id="select-type-text">Select a type</option>
+                            <option value="district">District</option>
+                            <option value="neighborhood">Neighborhood</option>
+                            <option value="town">Town</option>
+                            <option value="province">Province</option>
+                            <option value="municipality">Municipality</option>
+                            <option value="autonomous_community">Autonomous Community</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="search-name" id="search-name-label">Search by name</label>
+                        <input type="text" id="search-name" placeholder="Enter location name">
+                    </div>
+                    <div class="form-group">
+                        <label for="search-id" id="search-id-label">Search by ID prefix</label>
+                        <input type="text" id="search-id" placeholder="Enter ID prefix">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-header">
+            <h2 id="results-title">Results</h2>
+            <div id="results-count">0 locations found</div>
+        </div>
+
+        <div class="results-container">
+            <div class="results-list-header">
+                <div class="col-name" id="name-header">Name</div>
+                <div class="col-type" id="type-header">Type</div>
+                <div class="col-id" id="id-header">ID</div>
+                <div class="col-action" id="action-header">Action</div>
+            </div>
+            <div id="results-list">
+                <div class="no-results" id="no-results-text">
+                    No locations found. Please adjust your filters or search criteria.
+                </div>
+            </div>
+        </div>
+         <p class="footer-text">
+            <span id="access-text">Access the scraper:</span> 
+            <a href="https://prochat.tools/tools">Idealista Scraper on ProChat</a>
+            | <span id="created-by-text">Created by ProChat</span>
+        </p>
+    </div>
+
+    <div id="copied-message" class="copied-message">
+        ID copied to clipboard!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
